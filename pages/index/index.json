@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-button": "vant-weapp/button",
+    "calendar": "plugin://calendar/calendar",
+    "van-card": "vant-weapp/card"
+  }
+}

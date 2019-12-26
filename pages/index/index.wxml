@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <!-- https://developers.weixin.qq.com/community/develop/doc/00024678570380b58ae68c86d56c0c -->
+  <view>
+    <calendar calendar-style="calendar" header-style="calendar-header" board-style="calendar-board" days-color="{{dayStyle}}" weeks-type="cn" cell-size="30" binddayClick="dayClick" />
+  </view>
+  <view>
+    <van-card num="2" tag="已加入" desc="描述信息" title="1-to-1 教练练习" thumb="{{ imageURL }}">
+    <view slot="footer">
+      <van-button size="mini">参加</van-button>
+    </view>
+    </van-card>
+    <van-card num="2" tag="已加入" desc="描述信息" title="1-to-1 教练练习" thumb="{{ imageURL }}">
+    <view slot="footer">
+      <van-button size="mini">参加</van-button>
+    </view>
+    </van-card>
+    <van-card num="2" tag="未加入" desc="描述信息" title="1-to-1 教练练习" thumb="{{ imageURL }}">
+    <view slot="footer">
+      <van-button size="mini">参加</van-button>
+    </view>
+    </van-card>
+  </view>
+<!--  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+</view>
